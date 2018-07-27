@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>21_TP_JS_Dom0_Fenetre</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            var visible=false;
+            var fenetre = null;
+            var option = "width=200px,height=200px,toolbar=yes, " +
+                    "directories = no, menubar = no, scrollbars = yes, status = yes";
+            function ouvreFenetre() {
+                if (fenetre == null) {
+                    fenetre = open("", "fenetre", option, false);
+                    fenetre.document.title="Fenetre fille";
+                    fenetre.document.write("<h1>Je suis une fille</h1>");
+                    visible =true;
+                } else {
+                    fenetre.focus();
+                }
+
+            }
+            function taillePlus(T1, T2) {
+                fenetre.resizeBy(T1, T2);
+            }
+            function tailleMoins(t1, t2) {
+                fenetre.resizeBy(t1, t2);
+            }
+            function cacherMonter(){
+                if(visible==true){
+                    fenetre.blur();
+                    visible = false;
+                }else{
+                    fenetre.focus();
+                    visible= true;
+                }
+            }
+        </script>        
+    </head>
+    <body>
+        <h1>TP sur la gestion des fen&ecirc;tres</h1><br>
+        <form>
+            <input type="button" value="Nouvelle fenetre" onclick="ouvreFenetre()"/>
+            <input type="button" value="Fermer" onclick="fenetre.close()" />
+            <input type="button" value="Taille +" onclick="taillePlus(50, 50); fenetre.focus()"/>
+            <input type="button" value="Taille -" onclick="tailleMoins(-50, -50); fenetre.focus()"/><br>
+            <input type="button" value="Montrer" onclick="fenetre.focus()"/>
+
+        </form>
+
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>20_TP_JS_Dom0_InfosNav</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script type="text/javascript">
+            document.write("<h1>Information de votre navigateur</h1>");
+            document.write("Votre navigateur est de code : " + navigator.appCodeName + "<br><br>");
+            document.write("Votre navigateur porte le nom : " + navigator.appName +"<br><br>");
+            document.write("Son numero de version est : " + navigator.appVersion + "<br><br>");
+            document.write("Les cookies sont autorisés : " + navigator.cookieEnabled + "<br><br>");
+            document.write("Votre plateforme : " + navigator.platform + "<br><br>");
+            document.write("Votre entête : " + navigator.userAgent + "<br><br>");
+            document.write("Votre langage actuel : " + navigator.language + "<br>");
+                        
+            document.write("<h1>Informations de votre configation écran</h1>");
+            document.write("Largeur : " + screen.width + "<br><br>");
+            document.write("Hauteur : " + screen.height + "<br><br>");
+            document.write("Largeur utilisable : " + screen.availWidth + "<br><br>");
+            document.write("Hauteur utilisable : " + screen.availHeight + "<br><br>");
+            document.write("Profondeur des couleur : " + screen.colorDepth + "<br><br>");
+            document.write("Résolution de couleur : " + screen.pixelDepth + "<br>");
+            
+            document.write("<h1>Informations de la fenetre de votre navigateur</h1>");
+            document.write("Largeur (sans barre d'outils et barre de défilement): " + window.innerWidth + "<br><br>");
+            document.write("Hauteur (sans barre d'outils et barre de défilement): " + window.innerHeight + "<br><br>");
+            document.write("Largeur (avec barre d'outils et barre de défilement): " + window.outerWidth + "<br><br>");
+            document.write("Hauteur (avec barre d'outils et barre de défilement): " + window.outerHeight + "<br><br>");
+        </script>
+    </body>
+</html>

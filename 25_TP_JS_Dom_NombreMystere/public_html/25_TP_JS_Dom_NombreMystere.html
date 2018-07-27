@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Jeu du num&eacute;ro myst&eacute;rieux </title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="25_TP_JS_Dom_NombreMystere.css" rel="stylesheet" type="text/css"/>
+        <script src="25_TP_JS_Dom_NombreMystere.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <div>
+            <h1>D&eacute;couvrez le nombre myst&eacute;rieux</h1>
+            <h3>Vous avez 7 essais pour trouver le nombre choisi
+                par l'ordinateur, au hasard entre 1 et 100</h3> 
+            <p id="form">
+                <input type="button" value="Nouveau jeu" onclick="init()"/>
+                <input type="button" value="Solution" onclick="solution()"/>
+                <input type="button" value="Proposer" onclick="propose()"/><br>
+            </p>
+            <p id="jeu">
+                <label>Proposition :</label>
+                <input type="text" id="proposition" value="0" name="proposition" size="10" maxlength="10"/><br><br>
+                <label>N°essai :</label>
+                <input type="text" id="essai" name="essai" size="10" maxlength="10" disabled=""/><br><br>
+                <label>Message :</label>
+                <input type="text" id="message" name="message" size="20" disabled="disabled"/><br><br>
+                <label>R&eacute;ponse :</label>
+                <input type="text" id="reponse" name="reponse" size="45" disabled="disabled"/><br><br>
+            </p>
+        </div>
+    </body>
+</html>

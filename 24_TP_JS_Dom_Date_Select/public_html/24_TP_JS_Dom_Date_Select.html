@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calcul nombre de jours select</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="24_TP_JS_Dom_Date_Select.js" type="text/javascript"></script>
+    </head>
+    <body onload="init()">
+        <form action="#" method="post" enctype="text/plain">
+            <fieldset>
+                <legend><strong><em>Entrez votre date de naissance</em></strong></legend><br>
+                <p>
+                    <label>Ann&eacute;e</label>
+                    <select id="annee" name="annee" onchange="choixJour()"></select>
+
+                    <label>mois</label>
+                    <select name="mois" id="mois" onchange="choixJour()">                   
+                        <option value="1" selected="selected">Janvier</option>
+                        <option value="2">Février</option>
+                        <option value="3">Mars</option>
+                        <option value="4">Avril</option>
+                        <option value="5">Mai</option>
+                        <option value="6">Juin</option>
+                        <option value="7">Juillet</option>
+                        <option value="8">Août</option>
+                        <option value="9">Septembre</option>
+                        <option value="10">Octobre</option>
+                        <option value="11">Novembre</option>
+                        <option value="12">Décembre</option>                   
+                    </select>  
+                    <label>jour</label>
+                    <select id="jour" name="jour"></select>                
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend><strong><em>S&eacute;lectionnez l'unit&eacute;</em></strong></legend>
+                <p>
+                    <input type="radio" name="date" value="Jours" id="Jours" checked="checked" /><label>jours</label><br>
+                    <input type="radio" name="date" value="Mois" id="Mois" /><label>mois</label><br>
+                    <input type="radio" name="date" value="Année" id="Annee" /><label>ann&eacute;es</label><br>
+                </p>
+            </fieldset>
+            <input type="button" name="calcul" value="Calculer" onclick="calculDate()"/>
+        </form>
+    </body>
+</html>

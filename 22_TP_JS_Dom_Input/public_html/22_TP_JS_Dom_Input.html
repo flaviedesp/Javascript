@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>22_TP_JS_Dom_Input</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <script type="text/javascript">
+
+            function affiche() {
+                /*var nom = document.getElementById("Nom").value;*/
+                var nom = Nom.value;
+                var prenom = document.getElementById("Prenom").value;
+                if(nom!="" && prenom!=""){
+                    corps.innerHTML ="<h1>Bonjour " + prenom + " " + nom + "</h1><br>";
+                    /* document.getElementById("corps").innerHTML ="<h1>Bonjour " + prenom + " " + nom + "</h1><br>";*/
+                }else{
+                    corps.innerHTML="le nom ou le prenom sont vide!";
+                } 
+            }
+        </script>
+    </head>
+    <body> 
+        <h1>Modifier le contenu d'une balise</h1><br>
+        <div id="corps">
+            <label>Entrer votre nom</label>
+            <input type="text" id="Nom" name="nom" size="50" maxlength="50"/><br>
+            <label>Entrer votre pr&eacute;nom</label>
+            <input type="text" id="Prenom" name="prenom" size="50" maxlength="50"/><br><br>
+            <input type="button" value="Modifier" onclick="affiche()"/>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>10_TP_JS_G&eacute;n&eacute;ralit&eacute;</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="TP_generalite.css" rel="stylesheet" type="text/css"/>
+
+    </head>
+    <body>
+        <h1> Table de multiplication </h1>
+        <br>
+        <div>            
+            <script type="text/javascript">
+                var n = 9;
+
+                n = prompt("Entrez une valeur entière :", "9");
+                document.write("<table><thead><tr><th>Multiplication</th><th>R&eacute;sultat</th></tr></thead>");
+
+                if (n !== null) {
+                    for (var i = 1; i <= 9; i++) {
+                        document.write("<tbody><tr><td>" + n + " x " + i + "</td><td>" + n * i + "</td></tr></tbody>");
+                    }
+
+                } else {
+                    document.write("entier erronné");
+                }
+                document.write("</table>")
+            </script>            
+        </div>
+    </body>
+</html>

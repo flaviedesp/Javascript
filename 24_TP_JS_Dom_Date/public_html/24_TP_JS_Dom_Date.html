@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Calcul nombre de jours</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="24_TP_JS_Dom_Date.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <form action="#" method="post" enctype="text/plain">
+            <fieldset>
+                <legend><strong><em>Entrez votre date de naissance</em></strong></legend><br>
+                <p>
+                    <label for="annee">Ann&eacute;e</label>
+<!--                    <select onchange="annee()"></select>-->
+                    <input  type="text" name="annee" size="15" value="1900" id="annee"/>
+                    <label for="mois">mois</label>
+                    <input type="text" name="mois" value="01" size="20" id="mois"/>
+                    <label for="jour">jour</label>
+                    <input type="text" name="jour" size ="30" value="1" id="jour"/>
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend><strong><em>S&eacute;lectionnez l'unit&eacute;</em></strong></legend>
+                <p>
+                    <input type="radio" name="date" value="Jours" id="Jours" checked="checked" /><label>jours</label><br>
+                    <input type="radio" name="date" value="Mois" id="Mois" /><label>mois</label><br>
+                    <input type="radio" name="date" value="Année" id="Annee" /><label>ann&eacute;es</label><br>
+                </p>
+            </fieldset>
+            <input type="button" name="calcul" value="Calculer" onclick="calculDate()"/>
+        </form>
+    </body>
+</html>
